@@ -1,0 +1,17 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+  body *, html * {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0; }
+
+.animation-switch {
+  background: #333333;
+  color: #fefefe;
+  padding: 8px;
+  width: 100%;
+  text-align: right; }
+
+/*# sourceMappingURL=style.css.map */
