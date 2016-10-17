@@ -1,4 +1,4 @@
-# Motion Detector
+# Omri.js
 
 A javascript library designed to give the user control over animations.
 
@@ -6,7 +6,7 @@ A javascript library designed to give the user control over animations.
 
 1) Include the js file in the head of the document.
 2) Set all animations to only run when the parent class of 'animate' is found on
-the body. 
+the body.
 3) Design all animations so that the final "read" state is what the page looks
 like when there is not animate class
 
@@ -20,4 +20,3 @@ Change language
 Color change
 Transparent bar
 fixed position
-
