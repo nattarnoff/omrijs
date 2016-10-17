@@ -20,3 +20,9 @@ Change language
 Color change
 Transparent bar
 fixed position
+
+## Working on this
+
+1) Dependancies: Ruby, Sass, Node, NPM, Grunt
+2) Run `npm install`
+3) LiveReload is currently broken, but running `node server.js` will open the page on localhost:8080
