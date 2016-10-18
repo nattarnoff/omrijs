@@ -24,22 +24,27 @@ function omri(options){
     , node = _d.createElement('div')
     , label = _d.createElement('label')
     , tog = _d.createElement('span')
+    , status = _d.createElement('span')
     , input = _d.createElement('input');
+
     if(!$b.classList.contains(options.animationClass)){
       $b.classList.add(options.animationClass);
     };
     //if(document.body != null){ document.body.appendChild(template); }
     $b.insertBefore(node, $1st);
-    node.appendChild(label);
-    node.appendChild(input);
-    label.appendChild(tog).classList.add('switch-wrapper');
+    node.appendChild(label).setAttribute('for','toggle');
+    node.appendChild(input).setAttribute('type','checkbox');
+    input.setAttribute('id','toggle');
+    input.classList.add('visuallyHidden');
+    label.textContent= options.animationLabel;
+    label.appendChild(status);
     node.classList.add('animation-switch');
+    status.classList.add('status');
+    status.textContent = " "+ options.statusLabel;
+    label.appendChild(tog).classList.add('switch-wrapper');
 };
 
-omri({
-  //animationLabel : 'Animate',
-  //statusLabel : 'play'
-});
+
 
 
 /*<div class="animation-switch">
