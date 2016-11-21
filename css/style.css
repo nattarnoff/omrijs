@@ -6,12 +6,51 @@ body, html {
     box-sizing: inherit;
     padding: 0;
     margin: 0; }
-
+.visuallyHidden {
+  position: absolute;
+ width: 1px;
+ height: 1px;
+ padding: 0;
+ margin: -1px;
+ overflow: hidden;
+ clip: rect(0,0,0,0);
+ border: 0;
+}
 .animation-switch {
   background: #333333;
   color: #fefefe;
   padding: 8px;
   width: 100%;
   text-align: right; }
+.switch-wrapper {
+  display: block;
+  background: #fefefe;
+  text-transform: uppercase;
+  margin: 0 .5em;
+  border: 1px solid #fefefe;
+  position: relative;
+  float: right;
+  color: #333;
+  border-radius: 4px;
+}
+.status {
+  width: 49%;
+  padding: 0 .5em;
+  display: inline-block;
+  text-align: center;
+  float: left;
+  border-radius: 4px;
+}
+input ~ .switch-wrapper > .status.on, input:checked ~ .switch-wrapper > .status.off  {
+  background: #7DCB78;
+  transition: all .25s ease-in-out;
+
+}
+input:checked ~ .switch-wrapper > .on {
+  color: #333;
+  background: transparent;
+  transition: all .25s ease-in-out;
+
+}
 
 /*# sourceMappingURL=style.css.map */

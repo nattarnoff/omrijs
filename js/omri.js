@@ -42,6 +42,12 @@ function omri(options){
     status.classList.add('status');
     status.textContent = " "+ options.statusLabel;
     label.appendChild(tog).classList.add('switch-wrapper');
+
+    // function isChecked(){
+    //look to see if the toggle is checked
+    //if toggle:checked, remove active class from on
+    //add active class to off
+  //}
 };
 
 

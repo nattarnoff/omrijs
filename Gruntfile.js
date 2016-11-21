@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
- 
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     sass: {
@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         files: 'sass/*.sass',
         tasks: ['sass'],
         options: {
-          livereload: true
+          //livereload: true
         }
       }
     }
