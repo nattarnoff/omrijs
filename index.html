@@ -3,21 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <title>Omri.js</title>
-  <script src="//localhost:35729/livereload.js"></script>
-
   <link rel="stylesheet" href="css/style.css">
+  <style>
+  @-webkit-keyframes mover {
+    0%, 100% { left: 0px; }
+    50% { left: calc(100% - 100px); }
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    font-weight: 100;
+  }
+  .animationBlock {
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    max-width: 800px;
+    width: 90%;
+  }
+  .animatedBlock {
+    height: 100px;
+    width: 100px;
+    background: red;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    position: relative;
+  }
+  .animator {
+    animation-name: mover;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-play-state: paused;
+    transition: all 200ms ease-in-out;
+  }
+  .animate-on .animator {
+  animation-play-state: running;
+  background: green;
+  transition: all 200ms ease-in-out;
+  }
+  </style>
 </head>
 <body class="js test">
   <h1>Hello World</h1>
 
 <div class="demo">
-   <h2>Demo</h2>
+   <h2>CSS Animation Demo</h2>
+   <div class="animationBlock">
+     <div class="animatedBlock animator">Animated Block</div>
+   </div>
 </div>
 <script src="js/omri.js"></script>
 <script>
 omri({
   //animationLabel : 'Animate',
-  //defaultState : true
+  // defaultState : true
 });
 </script>
 </body>

@@ -27,7 +27,7 @@ function omri(options){
     , switchWrapper = _d.createElement('span')
     , input = _d.createElement('input');
 
-    if(!$b.classList.contains(options.animationClass)){
+    if(!$b.classList.contains(options.animationClass) && options.defaultState === false){
       $b.classList.add(options.animationClass);
     };
 
@@ -47,9 +47,17 @@ function omri(options){
     if(options.defaultState === true){
       input.setAttribute('checked', 'checked');
     };
-    // function isChecked(){
+
+    var el = document.getElementById("animationToggle");
+    el.addEventListener("click", function(){
+      if(el.checked){
+        $b.classList.remove(options.animationClass);
+      } else {
+        $b.classList.add(options.animationClass);
+      }
+    }, false);
     //look to see if the toggle is checked
     //if toggle:checked, remove active class from on
     //add active class to off
-  //}
+
 };
