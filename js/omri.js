@@ -27,6 +27,9 @@ function omri(options){
     , switchWrapper = _d.createElement('span')
     , input = _d.createElement('input');
 
+/* if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    //reduce animation
+} */
     if(!$b.classList.contains(options.animationClass) && options.defaultState === false){
       $b.classList.add(options.animationClass);
     };
